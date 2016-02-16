@@ -1,0 +1,32 @@
+Balanced Accuracy
+91.740356
+Accuracy - I
+cat: testI_0001.dat.acc: No such file or directory
+cat: testI_0002.dat.acc: No such file or directory
+cat: testI_0003.dat.acc: No such file or directory
+cat: testI_0004.dat.acc: No such file or directory
+cat: testI_0005.dat.acc: No such file or directory
+cat: testI_0006.dat.acc: No such file or directory
+cat: testI_0007.dat.acc: No such file or directory
+cat: testI_0008.dat.acc: No such file or directory
+cat: testI_0009.dat.acc: No such file or directory
+Accuracy - RT
+cat: testRT_I_0001.dat.acc: No such file or directory
+cat: testRT_I_0002.dat.acc: No such file or directory
+cat: testRT_I_0003.dat.acc: No such file or directory
+cat: testRT_I_0004.dat.acc: No such file or directory
+cat: testRT_I_0005.dat.acc: No such file or directory
+cat: testRT_I_0006.dat.acc: No such file or directory
+cat: testRT_I_0007.dat.acc: No such file or directory
+cat: testRT_I_0008.dat.acc: No such file or directory
+cat: testRT_I_0009.dat.acc: No such file or directory
+Accuracy - D
+cat: testD_0001.dat.acc: No such file or directory
+cat: testD_0002.dat.acc: No such file or directory
+cat: testD_0003.dat.acc: No such file or directory
+cat: testD_0004.dat.acc: No such file or directory
+cat: testD_0005.dat.acc: No such file or directory
+cat: testD_0006.dat.acc: No such file or directory
+cat: testD_0007.dat.acc: No such file or directory
+cat: testD_0008.dat.acc: No such file or directory
+cat: testD_0009.dat.acc: No such file or directory

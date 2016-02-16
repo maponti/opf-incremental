@@ -1,0 +1,118 @@
+﻿LibOPF Incremental is a library based on LibOPF with an incremental
+version of OPF Classifier.
+
+This code is related to the paper "An incremental linear-time learning algorithm for the
+Optimum-Path Forest classifier", submitted to Pattern Recognition Letters.
+
+Moacir Ponti
+Mateus Riva
+
+ICMC / USP 2016
+
+For instruction about the original LibOPF check README_LibOPF.
+
+To run the main experiments described in the paper, run the shell script bin/simexp.sh.
+
+Programs included
+=================
+
+In this package, we have the following programs:
+
+opf_incremental_split:
+
+	This is a program to randomly split the dataset into a training and testing set, then further split the training dataset into many smaller ones, to simulate incremental learning.
+
+opf_includenew:
+
+	This is a program to execute the classification of new samples and to add them to the trained model, maintaining the model's properties.
+
+opf_includedift:
+
+	This is a program to execute the classification of new samples and to add them to the trained model as prototypes.
+
+
+'opf_incremental_split' Usage
+=================
+
+Usage: opf_incremental_split <P1> <P2> <P3> <P4> <P5>
+
+	P1: input dataset in the OPF file format
+	P2: percentage for the training sets total size [0,1]
+	P3: percentage for the test set size [0,1]
+	P4: percentage of the initial training set
+	P5: total of incremental training sets, including the initial
+	P6: normalize features? 1 - Yes  0 - No
+
+The sum P2+P3 must be 1.
+
+The features are normalized with the following equation: 
+
+N_i = (F_i - M_i)/S_i, 
+
+where F_i, M_i and S_i are, respectively, the feature i, the average
+of F_i and the standard deviation of F_i in the dataset.
+
+The program splits the dataset into P5+1 new files.
+
+'opf_includenew' Usage
+=================
+
+Usage: opf_includenew <P1> <P2>
+
+	P1: new data to include in classifier (also in the OPF file format)
+	P2: new training set (also in the OPF file format)
+
+
+	The program designs a classifier from training.opf and the data in P1 and outputs it in a
+	file named P2.opf, which is used by 'opf_classify' for
+	testing.
+
+	The opf_includenew also outputs the following files:
+	-> .out: it contains the predicted labels (incremental training phase)
+	-> .time: it contains the execution time in seconds (incremental training phase)
+	-> .acc: it contains the accuracy (incremental training phase)
+
+
+
+'opf_includedift' Usage
+=================
+
+Usage: opf_includedift <P1> <P2>
+
+	P1: new data to include in classifier (also in the OPF file format)
+	P2: new training set (also in the OPF file format)
+
+
+	The program designs a classifier from training.opf and the data in P1 and outputs it in a
+	file named P2.opf, which is used by 'opf_classify' for
+	testing.
+
+	The opf_includedift also outputs the following files:
+	-> .out: it contains the predicted labels (incremental training phase)
+	-> .time: it contains the execution time in seconds (incremental training phase)
+	-> .acc: it contains the accuracy (incremental training phase)
+
+
+
+Tools included
+=================
+
+In this package, we have the following tools:
+
+base_creator:
+
+	This is a program to create the BaseN datasets.
+
+'base_creator' Usage
+=================
+
+Usage: base_creator <P1> <P2> <P3>
+
+
+	P1: name of the dataset
+	P2: type of the dataset (1, 2 or 3)
+	P3: size of the dataset (in sample count)
+
+
+	The program creates a synthetic dataset based on predefined rules.
+
